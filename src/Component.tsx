@@ -177,7 +177,7 @@ export const Ribbons: React.FC<RibbonsProps> = ({
       };
 
       const count = pointCount;
-      const points: Vec3[] = [];
+      const points: any[] = [];
       for (let i = 0; i < count; i++) {
         points.push(new Vec3());
       }
