@@ -115,9 +115,9 @@ export const Projects = () => {
               <motion.div
                 className="relative w-full h-full transition-none"
                 style={{ transformStyle: "preserve-3d" }}
-                animate={{
-                  rotateY: flippedId === index ? 180 : 0,
-                }}
+                // animate={{
+                //   rotateY: flippedId === index ? 180 : 0,
+                // }}
                 transition={{
                   duration: 0.6,
                   ease: "easeInOut",
