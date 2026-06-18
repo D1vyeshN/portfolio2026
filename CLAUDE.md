@@ -6,8 +6,8 @@
 - Experience: 2+ years
 - Location: Surat, Gujarat, India
 - Email: divyesh21j91@gmail.com
-- GitHub: https://github.com/divyesh21j91
-- LinkedIn: https://linkedin.com/in/divyesh21j91
+- GitHub: https://github.com/D1vyeshN
+- LinkedIn: https://linkedin.com/in/divyesh-nandanwar
 
 ## Professional Summary
 Full Stack Developer with 2+ years of professional experience building scalable, user-focused web applications with React.js, Next.js, and Node.js. Comfortable owning features across the stack — frontend architecture, REST API design, and database modeling. I take performance seriously, enjoy mentoring, and bring a security-aware mindset from an earlier role in penetration testing. Always learning — currently building AI-integrated projects and exploring LLM workflows.

@@ -2,60 +2,127 @@
 
 import React, { useState } from "react";
 import { motion } from "framer-motion";
-import { ExternalLink, Layers } from "lucide-react";
+import { ExternalLink } from "lucide-react";
 import { GithubIcon } from "@/components/ui/icons";
+import Image from "next/image";
 
 const projects = [
   {
-    title: "NOVA — AI Voice Chat Application",
+    title: "NOVA — AI Voice Chat",
     description:
-      "AI voice chat app with speech-to-text, LLM-based responses, and a two-phase tool-calling system for dynamic web search queries. Features real-time streaming and PWA support.",
-    tech: ["Next.js", "TypeScript", "LLM APIs", "PWA"],
-    live: "https://aichatbydivyesh.vercel.app",
-    github: "#",
-    details: [
-      "Real-time streaming for instant responses",
-      "PWA installable across devices",
-      "34% bundle reduction via dynamic imports",
-      "Two-phase tool-calling for dynamic web search",
+      "Advanced AI voice assistant built with Next.js, featuring real-time speech recognition, intelligent web-enhanced conversations, streaming responses, and production-grade performance optimization.",
+    tech: [
+      "Next.js",
+      "TypeScript",
+      "React",
+      "Tailwind CSS",
+      "Ant Design",
+      "Groq LLaMA",
+      "Whisper",
+      "Tavily"
     ],
-    image: "/project-nova.jpg",
-    color: "from-blue-500/20 to-purple-500/20",
+    live: "https://aichatbydivyesh.vercel.app",
+    github: "https://github.com/D1vyeshN/Nova-AI-Chat",
+    details: [
+      "Developed end-to-end voice AI workflow with STT, LLM, and TTS integration",
+      "Implemented intelligent tool-calling system with automated web search capabilities",
+      "Built real-time streaming chat experience with dynamic status indicators",
+      "Optimized application performance with lazy loading and code splitting",
+      "Secured external API integrations through server-side Next.js routes",
+      "Enabled Progressive Web App (PWA) support for native-like mobile experience"
+    ],
+    image: "/images/nova-ai-image.png",
+    color: "from-fuchsia-500/20 to-violet-500/20",
+    icon: "🚀",
+  },
+  // {
+  //   title: "NOVA — AI Voice Chat Application",
+  //   description:
+  //     "AI voice chat app with speech-to-text, LLM-based responses, and a two-phase tool-calling system for dynamic web search queries. Features real-time streaming and PWA support.",
+  //   tech: ["Next.js", "TypeScript", "LLM APIs", "PWA"],
+  //   live: "https://aichatbydivyesh.vercel.app",
+  //   github: "#",
+  //   details: [
+  //     "Real-time streaming for instant responses",
+  //     "PWA installable across devices",
+  //     "34% bundle reduction via dynamic imports",
+  //     "Two-phase tool-calling for dynamic web search",
+  //   ],
+  //   image: "/images/nova-ai-image.png",
+  //   color: "from-blue-500/20 to-purple-500/20",
+  //   icon: "💬",
+  // },
+  // {
+  //   title: "E-commerce (Jewelry)",
+  //   description:
+  //     "Production-grade jewelry e-commerce platform with a dynamic banner system, reusable UI components, and optimized rendering for large datasets.",
+  //   tech: ["React.js", "Next.js", "TypeScript", "Redux Toolkit", "Node.js", "PostgreSQL"],
+  //   live: "#",
+  //   github: "#",
+  //   details: [
+  //     "Dynamic banner system from admin panel",
+  //     "Reusable UI components for product config",
+  //     "Optimized rendering for large datasets",
+  //     "Redux Toolkit state management",
+  //   ],
+  //   image: "/images/nova-ai-image.png",
+  //   color: "from-emerald-500/20 to-teal-500/20",
+  //   icon: "💍",
+  // },
+  {
+    title: "Real-Time Chat Application",
+    description:
+      "Production-ready real-time chat platform with instant messaging, room management, JWT authentication, and live user presence powered by Socket.IO.",
+    tech: [
+      "Next.js",
+      "React",
+      "TypeScript",
+      "Node.js",
+      "Express.js",
+      "MongoDB",
+      "Socket.IO",
+      "JWT"
+    ],
+    live: "https://chat-app-socket-mern.vercel.app",
+    github: "https://github.com/D1vyeshN/chat-app",
+    details: [
+      "Real-time messaging with Socket.IO",
+      "Group chats and 1-to-1 conversations",
+      "Message status tracking (sent, delivered, read)",
+      "Typing indicators and online presence",
+      "Message editing and deletion",
+      "JWT authentication with secure password hashing"
+    ],
+    image: "/images/chat-app-image.png",
+    color: "from-sky-500/20 to-indigo-500/20",
     icon: "💬",
   },
   {
-    title: "E-commerce Platform (Jewelry Domain)",
+    title: "TalentHub",
     description:
-      "Production-grade jewelry e-commerce platform with a dynamic banner system, reusable UI components, and optimized rendering for large datasets.",
-    tech: ["React.js", "Next.js", "TypeScript", "Redux Toolkit", "Node.js", "PostgreSQL"],
-    live: "#",
-    github: "#",
-    details: [
-      "Dynamic banner system from admin panel",
-      "Reusable UI components for product config",
-      "Optimized rendering for large datasets",
-      "Redux Toolkit state management",
+      "A modern job marketplace platform built with the MERN stack, connecting candidates and recruiters through intelligent job discovery, application tracking, real-time communication, and analytics dashboards.",
+    tech: [
+      "Next.js",
+      "React",
+      "TypeScript",
+      "Redux Toolkit",
+      "Tailwind CSS",
+      "MongoDB",
+      "Express.js"
     ],
-    image: "/project-ecommerce.jpg",
-    color: "from-emerald-500/20 to-teal-500/20",
-    icon: "💍",
-  },
-  {
-    title: "Manufacturing Backend System",
-    description:
-      "Full stack backend for a manufacturing project — built REST APIs, designed PostgreSQL data models, and handled business logic end-to-end.",
-    tech: ["Node.js", "Express.js", "PostgreSQL", "Sequelize"],
-    live: "#",
-    github: "#",
+    live: "https://talent-hub-job-portal-app.vercel.app",
+    github: "https://github.com/D1vyeshN/talent-hub",
     details: [
-      "REST API design with Express.js",
-      "PostgreSQL database modeling",
-      "Sequelize ORM integration",
-      "End-to-end business logic handling",
+      "Role-based platform for Candidates, Recruiters, and Admin",
+      "Advanced job search, filtering, and application tracking",
+      "Recruiter dashboard with hiring funnel",
+      "Company profiles and job management",
+      "Real-time messaging system between recruiters and candidates",
+      "Responsive UI built with Next.js, Redux Toolkit, and Tailwind CSS"
     ],
-    image: "/project-manufacturing.jpg",
-    color: "from-orange-500/20 to-red-500/20",
-    icon: "🏭",
+    image: "/images/talent-hub-image.png",
+    color: "from-blue-500/20 to-cyan-500/20",
+    icon: "💼",
   },
 ];
 
@@ -108,16 +175,16 @@ export const Projects = () => {
             <motion.div
               key={index}
               variants={fadeInUp}
-              className="group h-[420px] perspective-1000"
+              className="group h-[440px] perspective-1000"
               onMouseEnter={() => setFlippedId(index)}
               onMouseLeave={() => setFlippedId(null)}
             >
               <motion.div
                 className="relative w-full h-full transition-none"
                 style={{ transformStyle: "preserve-3d" }}
-                // animate={{
-                //   rotateY: flippedId === index ? 180 : 0,
-                // }}
+                animate={{
+                  rotateY: flippedId === index ? 180 : 0,
+                }}
                 transition={{
                   duration: 0.6,
                   ease: "easeInOut",
@@ -131,7 +198,8 @@ export const Projects = () => {
                   <div className="aspect-video bg-muted relative overflow-hidden">
                     <div className={`absolute inset-0 bg-gradient-to-br ${project.color} opacity-80`} />
                     <div className="absolute inset-0 flex items-center justify-center text-muted-foreground">
-                      <Layers size={48} className="text-foreground/20" />
+                      {/* <Layers size={48} className="text-foreground/20" /> */}
+                      <Image src={project.image} alt={project.title} width={400} height={400} />
                     </div>
                   </div>
                   <div className="p-6">
@@ -150,28 +218,6 @@ export const Projects = () => {
                           {t}
                         </span>
                       ))}
-                    </div>
-                    <div className="flex items-center gap-4">
-                      {project.live !== "#" && (
-                        <a
-                          href={project.live}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="inline-flex items-center gap-1.5 text-sm font-semibold text-blue-600 dark:text-blue-400 hover:underline"
-                          onClick={(e) => e.stopPropagation()}
-                        >
-                          <ExternalLink size={16} /> Live Demo
-                        </a>
-                      )}
-                      <a
-                        href={project.github}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="inline-flex items-center gap-1.5 text-sm font-semibold text-muted-foreground hover:text-foreground transition-colors"
-                        onClick={(e) => e.stopPropagation()}
-                      >
-                        <GithubIcon size={16} /> GitHub
-                      </a>
                     </div>
                   </div>
                 </div>
@@ -225,6 +271,24 @@ export const Projects = () => {
               </motion.div>
             </motion.div>
           ))}
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="flex justify-center mt-16"
+        >
+          <motion.button
+            onClick={() => window.open("https://github.com/D1vyeshN", "_blank")}
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            transition={{ type: "spring", stiffness: 400, damping: 20 }}
+            className={`relative flex items-center gap-2 px-5 py-2.5 rounded-xl text-xs font-bold uppercase tracking-wider font-mono transition-all duration-300 cursor-pointer bg-muted/40 hover:bg-muted/80 text-muted-foreground hover:text-foreground border hover:border-blue-500/30`}
+          >
+            <GithubIcon className="w-3.5 h-3.5" /> View All Projects
+          </motion.button>
         </motion.div>
       </div>
     </section>

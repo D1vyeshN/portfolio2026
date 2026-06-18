@@ -63,12 +63,13 @@ export const Hero = () => {
             className="mb-8"
           >
             <span className="text-xl sm:text-2xl md:text-3xl font-semibold text-muted-foreground">
-              I am a{` `}
+              {/* I am a{` `} */}
               <TypeWriter
                 strings={[
-                  "Fullstack Developer",
-                  "React Expert",
-                  "Problem Solver",
+                  "Building products people love.",
+                  "Creating fast, scalable web applications.",
+                  "Transforming ideas into digital experiences.",
+                  "Engineering solutions that make an impact.",
                 ]}
                 speed={100}
                 deleteSpeed={50}
@@ -98,21 +99,23 @@ export const Hero = () => {
               View My Work <ArrowRight size={20} />
             </motion.a>
             <motion.a
-              href="#contact"
+              href={process.env.NEXT_PUBLIC_RESUME_URL}
+              target="_blank"
+              rel="noopener noreferrer"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               className="inline-flex items-center gap-2 px-8 py-3.5 bg-card text-foreground font-semibold rounded-xl border border-border hover:border-blue-500/50 hover:shadow-lg hover:shadow-blue-500/10 transition-all"
             >
-              Contact Me
+              Resume
             </motion.a>
           </motion.div>
 
           <motion.div
             variants={itemVariants}
-            className="mt-12 flex justify-center space-x-4"
+            className="mb-16 mt-4 sm:mb-0 sm:mt-12 flex justify-center space-x-4"
           >
             <motion.a
-              href="https://github.com/divyesh21j91"
+              href="https://github.com/D1vyeshN"
               target="_blank"
               rel="noopener noreferrer"
               whileHover={{ scale: 1.1, y: -2 }}
@@ -123,7 +126,7 @@ export const Hero = () => {
               <GithubIcon size={20} />
             </motion.a>
             <motion.a
-              href="https://linkedin.com/in/divyesh21j91"
+              href="https://linkedin.com/in/divyesh-nandanwar"
               target="_blank"
               rel="noopener noreferrer"
               whileHover={{ scale: 1.1, y: -2 }}
@@ -142,7 +145,7 @@ export const Hero = () => {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 1.5, duration: 0.5 }}
-        className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2"
+        className="absolute -bottom-0 sm:bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2"
       >
         <span className="text-xs text-muted-foreground uppercase tracking-widest">
           Scroll

@@ -2,7 +2,8 @@
 
 import React from "react";
 import { motion } from "framer-motion";
-import { MapPin, Clock, GraduationCap, Mail, User } from "lucide-react";
+import { MapPin, Clock, GraduationCap, Mail } from "lucide-react";
+import Image from "next/image";
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 30 },
@@ -36,8 +37,9 @@ export const About = () => {
             <div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 to-purple-500/10 rounded-3xl -rotate-3 -z-10" />
             <div className="w-full h-full bg-card rounded-3xl flex items-center justify-center border border-border overflow-hidden">
               <div className="flex flex-col items-center gap-4 text-muted-foreground">
-                <User size={64} className="text-blue-500/50" />
-                <span className="font-medium">Profile Photo</span>
+                {/* <User size={64} className="text-blue-500/50" /> */}
+                <Image src="/images/profile-image.png" alt="Profile Photo" width={700} height={700} />
+                {/* <span className="font-medium">Profile Photo</span> */}
               </div>
             </div>
           </motion.div>

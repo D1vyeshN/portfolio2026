@@ -7,15 +7,15 @@ import { Briefcase, Calendar, MapPin } from "lucide-react";
 const experiences = [
   {
     company: "Sarvadhi Solutions",
-    role: "Full Stack Developer",
+    role: "React.js Developer",
     period: "March 2024 – January 2026",
     location: "Surat, Gujarat, India",
     description: [
-      "Built and maintained user-facing and admin modules across e-commerce, LMS, and dashboard applications.",
-      "Developed core features: product pages, cart, checkout, order management, and user profiles.",
-      "Improved page load time using SSR/SSG, lazy loading, and code splitting, reducing bundle size by ~25%.",
-      "Eliminated redundant API calls using RTK Query caching across shared modules.",
-      "Led junior developer onboarding and code reviews; wrote technical documentation.",
+      "Owned frontend development of a jewelry e-commerce platform and admin dashboard using Next.js and TypeScript, supporting product catalog, user flows, and admin management features.",
+      "Engineered a scalable product variation system for 50,000+ products, ensuring accurate rendering of size, color, and dynamic pricing combinations across all UI flows.",
+      "Improved application performance and perceived load time using SSR, lazy loading, and Redux Toolkit optimization, enhancing user experience and scalability by 30%.",
+      "Built reusable, modular UI components and dynamic product selection workflows, reducing UI duplication and improving maintainability.",
+      "Collaborated with backend and design teams in an Agile environment to deliver production-ready features and iterative releases.",
     ],
   },
   {

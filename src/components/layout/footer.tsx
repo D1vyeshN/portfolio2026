@@ -12,7 +12,7 @@ export const Footer = () => {
       whileInView={{ opacity: 1 }}
       viewport={{ once: true }}
       transition={{ duration: 0.6 }}
-      className="bg-background border-t border-border py-12"
+      className="bg-background border-t border-border py-5"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col md:flex-row justify-between items-center gap-6">
@@ -22,7 +22,7 @@ export const Footer = () => {
 
           <div className="flex space-x-2">
             <a
-              href="https://github.com/divyesh21j91"
+              href="https://github.com/D1vyeshN"
               target="_blank"
               rel="noopener noreferrer"
               className="p-2.5 rounded-xl text-muted-foreground hover:text-foreground hover:bg-muted transition-all"
@@ -31,7 +31,7 @@ export const Footer = () => {
               <GithubIcon size={20} />
             </a>
             <a
-              href="https://linkedin.com/in/divyesh21j91"
+              href="https://linkedin.com/in/divyesh-nandanwar"
               target="_blank"
               rel="noopener noreferrer"
               className="p-2.5 rounded-xl text-muted-foreground hover:text-foreground hover:bg-muted transition-all"
