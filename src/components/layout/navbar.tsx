@@ -6,11 +6,11 @@ import { Moon, Sun, Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
 const navLinks = [
-  { name: "About", href: "#about" },
-  { name: "Skills", href: "#skills" },
-  { name: "Projects", href: "#projects" },
-  { name: "Experience", href: "#experience" },
-  { name: "Contact", href: "#contact" },
+  { name: "About", href: "/#about" },
+  { name: "Skills", href: "/#skills" },
+  { name: "Projects", href: "/#projects" },
+  { name: "Experience", href: "/#experience" },
+  { name: "Contact", href: "/#contact" },
 ];
 
 export const Navbar = () => {
@@ -28,9 +28,22 @@ export const Navbar = () => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 20);
 
-      const sections = navLinks.map((link) =>
-        document.querySelector(link.href)
-      );
+      // On /projects page, set Projects as active
+      if (window.location.pathname === "/projects") {
+        setActiveSection("projects");
+        return;
+      }
+
+      // Only track active sections on home page
+      if (window.location.pathname !== "/") {
+        setActiveSection("");
+        return;
+      }
+
+      const sections = navLinks.map((link) => {
+        const sectionId = link.href.replace(/^\/+/, "");
+        return document.querySelector(sectionId);
+      });
       let current = "";
       for (const section of sections) {
         if (section) {
@@ -75,26 +88,29 @@ export const Navbar = () => {
 
           {/* Desktop Nav */}
           <div className="hidden md:flex items-center space-x-1">
-            {navLinks.map((link) => (
-              <a
-                key={link.name}
-                href={link.href}
-                className={`relative px-3 py-2 text-sm font-medium rounded-lg transition-colors ${
-                  activeSection === link.href.slice(1)
-                    ? "text-blue-600 dark:text-blue-400"
-                    : "text-foreground/70 hover:text-foreground"
-                }`}
-              >
-                {link.name}
-                {activeSection === link.href.slice(1) && (
-                  <motion.div
-                    layoutId="activeSection"
-                    className="absolute inset-0 bg-blue-500/10 dark:bg-blue-400/10 rounded-lg -z-10"
-                    transition={{ type: "spring", stiffness: 300, damping: 30 }}
-                  />
-                )}
-              </a>
-            ))}
+            {navLinks.map((link) => {
+              const sectionId = link.href.replace(/^\/+/, "").replace(/^#/, "");
+              return (
+                <a
+                  key={link.name}
+                  href={link.href}
+                  className={`relative px-3 py-2 text-sm font-medium rounded-lg transition-colors ${
+                    activeSection === sectionId
+                      ? "text-blue-600 dark:text-blue-400"
+                      : "text-foreground/70 hover:text-foreground"
+                  }`}
+                >
+                  {link.name}
+                  {activeSection === sectionId && (
+                    <motion.div
+                      layoutId="activeSection"
+                      className="absolute inset-0 bg-blue-500/10 dark:bg-blue-400/10 rounded-lg -z-10"
+                      transition={{ type: "spring", stiffness: 300, damping: 30 }}
+                    />
+                  )}
+                </a>
+              );
+            })}
             <button
               onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
               className="ml-4 p-2.5 rounded-xl hover:bg-muted transition-colors"
@@ -143,20 +159,23 @@ export const Navbar = () => {
             className="md:hidden overflow-hidden bg-background/95 backdrop-blur-xl border-b border-border/50"
           >
             <div className="px-4 pt-2 pb-4 space-y-1">
-              {navLinks.map((link) => (
-                <a
-                  key={link.name}
-                  href={link.href}
-                  className={`block px-4 py-3 text-base font-medium rounded-xl transition-colors ${
-                    activeSection === link.href.slice(1)
-                      ? "bg-blue-500/10 dark:bg-blue-400/10 text-blue-600 dark:text-blue-400"
-                      : "text-foreground/70 hover:bg-muted hover:text-foreground"
-                  }`}
-                  onClick={() => setIsOpen(false)}
-                >
-                  {link.name}
-                </a>
-              ))}
+              {navLinks.map((link) => {
+                const sectionId = link.href.replace(/^\/+/, "").replace(/^#/, "");
+                return (
+                  <a
+                    key={link.name}
+                    href={link.href}
+                    className={`block px-4 py-3 text-base font-medium rounded-xl transition-colors ${
+                      activeSection === sectionId
+                        ? "bg-blue-500/10 dark:bg-blue-400/10 text-blue-600 dark:text-blue-400"
+                        : "text-foreground/70 hover:bg-muted hover:text-foreground"
+                    }`}
+                    onClick={() => setIsOpen(false)}
+                  >
+                    {link.name}
+                  </a>
+                );
+              })}
             </div>
           </motion.div>
         )}
