@@ -16,7 +16,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Divyesh Nandanwar | Software Engineer & Full Stack Developer",
-  description: "Portfolio of Divyesh Nandanwar, a Software Engineer and Full Stack Developer with 2+ years of experience building modern web applications using React, Next.js, Node.js, and TypeScript. Showcasing projects and solutions that solve real-world problems with clean and efficient software.",
+  description: "Portfolio of Divyesh Nandanwar, a Software Engineer and Full Stack Developer with 2 years of experience building modern web applications using React, Next.js, Node.js, and TypeScript. Showcasing projects and solutions that solve real-world problems with clean and efficient software.",
   keywords: ["Divyesh Nandanwar",
     "Full Stack Developer",
     "Software Engineer",
@@ -73,7 +73,7 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: "https://divyeshnandanwar.vercel.app",
     title: "Divyesh Nandanwar | Software Engineer & Full Stack Developer",
-    description: "Portfolio of Divyesh Nandanwar, a Software Engineer and Full Stack Developer with 2+ years of experience building modern web applications using React, Next.js, Node.js, and TypeScript. Showcasing projects and solutions that solve real-world problems with clean and efficient software.",
+    description: "Portfolio of Divyesh Nandanwar, a Software Engineer and Full Stack Developer with 2 years of experience building modern web applications using React, Next.js, Node.js, and TypeScript. Showcasing projects and solutions that solve real-world problems with clean and efficient software.",
     images: [
       {
         url: "https://divyeshnandanwar.vercel.app/images/profile-image.png",
@@ -86,13 +86,18 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Divyesh Nandanwar | Software Engineer & Full Stack Developer",
-    description: "Portfolio of Divyesh Nandanwar, a Software Engineer and Full Stack Developer with 2+ years of experience building modern web applications using React, Next.js, Node.js, and TypeScript. Showcasing projects and solutions that solve real-world problems with clean and efficient software.",
+    description: "Portfolio of Divyesh Nandanwar, a Software Engineer and Full Stack Developer with 2 years of experience building modern web applications using React, Next.js, Node.js, and TypeScript. Showcasing projects and solutions that solve real-world problems with clean and efficient software.",
     images: ["https://divyeshnandanwar.vercel.app/images/profile-image.png"],
     creator: "@Divyesh_43",
   },
   metadataBase: new URL("https://divyeshnandanwar.vercel.app"),
   alternates: {
     canonical: "https://divyeshnandanwar.vercel.app",
+  },
+   icons: {
+    icon: "/favicon.ico",
+    shortcut: "/favicon.ico",
+    apple: "/images/profile-image.png",
   },
 };
 
@@ -101,7 +106,7 @@ const jsonLd = {
   "@type": "Person",
   "name": "Divyesh Nandanwar",
   "jobTitle": "Software Engineer & Full Stack Developer",
-  "description": "Software Engineer and Full Stack Developer with 2+ years of experience building modern web applications using React, Next.js, Node.js, TypeScript, and AI integration.",
+  "description": "Software Engineer and Full Stack Developer with 2 years of experience building modern web applications using React, Next.js, Node.js, TypeScript, and AI integration.",
   "url": "https://divyeshnandanwar.vercel.app",
   "image": "https://divyeshnandanwar.vercel.app/images/profile-image.png",
   "sameAs": [
