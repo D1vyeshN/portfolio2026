@@ -38,7 +38,7 @@ const staggerContainer = {
 export const Projects = ({
   showAll = false,
   title = "Featured Projects",
-  description = "A selection of my recent work, ranging from AI applications to production-grade e-commerce platforms."
+  description = "A selection of my recent work, ranging from AI applications to production-grade e-commerce platforms.",
 }: {
   showAll?: boolean;
   title?: string;
@@ -48,6 +48,36 @@ export const Projects = ({
   const router = useRouter();
 
   const allProjects: Project[] = [
+    {
+      title: "Luxa - watch e-commerce",
+      description:
+        "A curated luxury timepiece marketplace built with Next.js, React, and TypeScript, connecting collectors with exceptional watches through sophisticated product discovery, secure checkout, and order tracking.",
+      tech: [
+        "Next.js",
+        "React",
+        "TypeScript",
+        "Redux Toolkit",
+        "Tailwind CSS",
+        "Express.js",
+        "MongoDB",
+        "Supabase",
+        "Stripe",
+        "Razorpay",
+      ],
+      live: "https://watch-luxa.vercel.app",
+      github: "https://github.com/D1vyeshN/watch-luxa",
+      details: [
+        "Luxury watch e-commerce with refined design system",
+        "Product catalog with categories, brands, and collections",
+        "Secure checkout with Stripe and Razorpay integration",
+        "User accounts, wishlist, and order tracking",
+        "Admin dashboard for inventory and order management",
+        "Responsive UI with Next.js, Redux Toolkit, and Tailwind CSS",
+      ],
+      image: "/images/watch-luxa.png",
+      color: "from-forest-900/20 to-secondary/20",
+      icon: "⌚",
+    },
     {
       title: "NOVA — AI Voice Chat",
       description:
@@ -60,7 +90,7 @@ export const Projects = ({
         "Ant Design",
         "Groq LLaMA",
         "Whisper",
-        "Tavily"
+        "Tavily",
       ],
       live: "https://aichatbydivyesh.vercel.app",
       github: "https://github.com/D1vyeshN/Nova-AI-Chat",
@@ -70,7 +100,7 @@ export const Projects = ({
         "Built real-time streaming chat experience with dynamic status indicators",
         "Optimized application performance with lazy loading and code splitting",
         "Secured external API integrations through server-side Next.js routes",
-        "Enabled Progressive Web App (PWA) support for native-like mobile experience"
+        "Enabled Progressive Web App (PWA) support for native-like mobile experience",
       ],
       image: "/images/nova-ai-image.png",
       color: "from-fuchsia-500/20 to-violet-500/20",
@@ -87,7 +117,7 @@ export const Projects = ({
         "Redux Toolkit",
         "Tailwind CSS",
         "React Hook Form",
-        "Framer Motion"
+        "Framer Motion",
       ],
       live: "https://luxury-jewellery-e-commerce.vercel.app",
       github: "https://github.com/D1vyeshN/luxury-jewellery-e-commerce",
@@ -113,7 +143,7 @@ export const Projects = ({
         "Redux Toolkit",
         "Tailwind CSS",
         "MongoDB",
-        "Express.js"
+        "Express.js",
       ],
       live: "https://talent-hub-job-portal-app.vercel.app",
       github: "https://github.com/D1vyeshN/talent-hub",
@@ -123,7 +153,7 @@ export const Projects = ({
         "Recruiter dashboard with hiring funnel",
         "Company profiles and job management",
         "Real-time messaging system between recruiters and candidates",
-        "Responsive UI built with Next.js, Redux Toolkit, and Tailwind CSS"
+        "Responsive UI built with Next.js, Redux Toolkit, and Tailwind CSS",
       ],
       image: "/images/talent-hub-image.png",
       color: "from-blue-500/20 to-cyan-500/20",
@@ -141,7 +171,7 @@ export const Projects = ({
         "Express.js",
         "MongoDB",
         "Socket.IO",
-        "JWT"
+        "JWT",
       ],
       live: "https://chat-app-socket-mern.vercel.app",
       github: "https://github.com/D1vyeshN/chat-app",
@@ -151,7 +181,7 @@ export const Projects = ({
         "Message status tracking (sent, delivered, read)",
         "Typing indicators and online presence",
         "Message editing and deletion",
-        "JWT authentication with secure password hashing"
+        "JWT authentication with secure password hashing",
       ],
       image: "/images/chat-app-image.png",
       color: "from-sky-500/20 to-indigo-500/20",
@@ -161,13 +191,7 @@ export const Projects = ({
       title: "PokemonVerse",
       description:
         "An interactive Pokémon explorer built with React and GraphQL, featuring infinite scrolling, real-time search, detailed Pokémon information, and a fully responsive user experience powered by PokéAPI.",
-      tech: [
-        "React",
-        "TypeScript",
-        "GraphQL",
-        "Tailwind CSS",
-        "PokéAPI"
-      ],
+      tech: ["React", "TypeScript", "GraphQL", "Tailwind CSS", "PokéAPI"],
       live: "https://pokemon-verse.vercel.app/",
       github: "https://github.com/D1vyeshN/PokemonVerse",
       details: [
@@ -175,7 +199,7 @@ export const Projects = ({
         "Implemented infinite scrolling for seamless browsing through the complete Pokémon collection",
         "Developed detailed Pokémon pages displaying stats, abilities, types, and evolution chains",
         "Added real-time search functionality for quick Pokémon discovery by name",
-        "Integrated loading states to provide smooth user feedback during GraphQL data fetching"
+        "Integrated loading states to provide smooth user feedback during GraphQL data fetching",
       ],
       image: "/images/pokemonverse.png",
       color: "from-yellow-500/20 to-orange-500/20",
@@ -193,7 +217,7 @@ export const Projects = ({
         "Express.js",
         "MongoDB",
         "Passport.js",
-        "Razorpay"
+        "Razorpay",
       ],
       live: "https://online-store-ecommerce-dn.vercel.app/",
       github: "https://github.com/D1vyeshN/e-commerce",
@@ -203,7 +227,7 @@ export const Projects = ({
         "Built shopping cart, address management, order history, and a seamless checkout flow with Razorpay payment integration",
         "Created a comprehensive admin dashboard for managing products, categories, brands, inventory, and customer orders",
         "Enabled user profile management with support for profile updates, addresses, and personalized account settings",
-        "Designed scalable REST APIs using Node.js, Express.js, and MongoDB to power the complete application"
+        "Designed scalable REST APIs using Node.js, Express.js, and MongoDB to power the complete application",
       ],
       image: "/images/ecommerce-store.png",
       color: "from-emerald-500/20 to-teal-500/20",
@@ -220,7 +244,7 @@ export const Projects = ({
         "React Three Fiber",
         "Tailwind CSS",
         "Framer Motion",
-        "EmailJS"
+        "EmailJS",
       ],
       live: "https://divyesh-nandanwar.vercel.app/",
       github: "https://github.com/D1vyeshN/portfolio",
@@ -230,7 +254,7 @@ export const Projects = ({
         "Showcased featured projects with dedicated detail pages, live demos, and GitHub repository links",
         "Integrated EmailJS-powered contact form for direct communication without a custom backend",
         "Enhanced user experience with smooth page transitions and interactive animations using Framer Motion",
-        "Utilized React Three Fiber to render interactive 3D models and create an engaging visual experience"
+        "Utilized React Three Fiber to render interactive 3D models and create an engaging visual experience",
       ],
       image: "/images/portfolio.png",
       color: "from-cyan-500/20 to-blue-500/20",
@@ -240,13 +264,7 @@ export const Projects = ({
       title: "YouTubeLite",
       description:
         "A responsive YouTube-inspired video streaming application built with React, featuring video browsing, search, category filtering, and a clean, modern user interface powered by the YouTube Data API.",
-      tech: [
-        "React",
-        "JavaScript",
-        "CSS3",
-        "YouTube Data API",
-        "React Router"
-      ],
+      tech: ["React", "JavaScript", "CSS3", "YouTube Data API", "React Router"],
       live: "https://youtube-lite-clone-dn.vercel.app/",
       github: "https://github.com/D1vyeshN/YoutubeLite-CloneWebsite",
       details: [
@@ -254,7 +272,7 @@ export const Projects = ({
         "Integrated YouTube Data API to fetch trending videos, search results, and channel information",
         "Implemented category-based video filtering and dynamic search functionality",
         "Created reusable React components for video cards, sidebar, navigation, and player pages",
-        "Optimized user experience with responsive layouts across desktop, tablet, and mobile devices"
+        "Optimized user experience with responsive layouts across desktop, tablet, and mobile devices",
       ],
       image: "/images/youtubelite.png", // Update with your image path
       color: "from-red-500/20 to-rose-500/20",
@@ -265,7 +283,10 @@ export const Projects = ({
   const displayedProjects = showAll ? allProjects : allProjects.slice(0, 3);
 
   return (
-    <section id="projects" className={showAll ? "pb-16 lg:pb-24" : `py-24 lg:py-32`}>
+    <section
+      id="projects"
+      className={showAll ? "pb-16 lg:pb-24" : `py-24 lg:py-32`}
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -274,9 +295,7 @@ export const Projects = ({
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            {title}
-          </h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">{title}</h2>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
             {description}
           </p>
@@ -314,10 +333,17 @@ export const Projects = ({
                   style={{ backfaceVisibility: "hidden" }}
                 >
                   <div className="aspect-video bg-muted relative overflow-hidden">
-                    <div className={`absolute inset-0 bg-gradient-to-br ${project.color} opacity-80`} />
+                    <div
+                      className={`absolute inset-0 bg-gradient-to-br ${project.color} opacity-80`}
+                    />
                     <div className="absolute inset-0 flex items-center justify-center text-muted-foreground">
                       {/* <Layers size={48} className="text-foreground/20" /> */}
-                      <Image src={project.image} alt={project.title} width={400} height={400} />
+                      <Image
+                        src={project.image}
+                        alt={project.title}
+                        width={400}
+                        height={400}
+                      />
                     </div>
                   </div>
                   <div className="p-6">
@@ -351,9 +377,18 @@ export const Projects = ({
                   <h3 className="text-xl font-bold mb-4 text-center">
                     {project.title}
                   </h3>
-                  <ul style={{ scrollbarWidth: 'thin', scrollbarColor: '#3b82f6 #1e293b' }} className="space-y-3 mb-6 overflow-y-auto">
+                  <ul
+                    style={{
+                      scrollbarWidth: "thin",
+                      scrollbarColor: "#3b82f6 #1e293b",
+                    }}
+                    className="space-y-3 mb-6 overflow-y-auto"
+                  >
                     {project.details.map((detail, i) => (
-                      <li key={i} className="flex items-start gap-2.5 text-sm text-muted-foreground">
+                      <li
+                        key={i}
+                        className="flex items-start gap-2.5 text-sm text-muted-foreground"
+                      >
                         <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-blue-500 shrink-0" />
                         {detail}
                       </li>
